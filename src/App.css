@@ -1,38 +1,132 @@
-.App {
-  text-align: center;
+body{
+  background-image: url(/public/food.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1{
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 48pt;
+  font-style: normal;
+  color: brown;
+ text-shadow: 3px 3px white
+ 
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.selected{
+  background-color: rgba(128, 128, 128, 0.568);
+  padding: 10px;
+  font-family: "Montserrat", sans-serif;
+  margin: 15px;
   color: white;
 }
+.default{
+  background-color: rgba(255, 255, 255, 0.719);
+  padding: 10px;
+  font-family: "Montserrat", sans-serif;
+  margin: 15px;
 
-.App-link {
-  color: #61dafb;
 }
+.container{
+  width: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.button-add{
+  font-family: "Montserrat", sans-serif;
+  background-color: 
+ #c18269;
+  color: 
+white;
+  font-size: 24pt;
+  width: 150px;
+  border: none;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+}
+.button-add:hover{
+  background-color: #bad128;
+}
+.App{
+  display: flex;
+  flex-direction: row;
+}
+.meal-editing{
+  display: flex;
+  flex-direction: column;
+  width: 100vh;
+}
+.whole-plan{
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+#title, #mealForADay{
+  font-family: "Montserrat", sans-serif;
+  font-size: 16pt;
+  padding: 5px;
+  margin: 5px;
+}
+#mealForADay{
+  height: 300px;
+}
+.text{
+  font-family: "Montserrat", sans-serif;
+  font-size: 16pt;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+}
+@media all and (max-width: 900px){
+  h1{
+     font-size: 24pt;
+    }
+  .container{
+    width: 100%;
   }
-  to {
-    transform: rotate(360deg);
+  .button-add{
+    font-size: 16pt;
+  }
+  #title, #mealForADay{
+width: 350px;
+    font-size: 16pt;
+    padding: 5px;
+    margin: 5px;
+  }
+  #mealForADay{
+    height: 180px;
+  }
+  .text{
+    font-size: 14pt;
+  }
+  .selected, .default{
+    width: 350px;
+  }
+}
+@media all and (max-width: 500px){
+  h1{
+     font-size: 18pt;
+    }
+  .container{
+    width: 100%;
+  }
+  .button-add{
+    font-size: 16pt;
+  }
+  #title, #mealForADay{
+width: 150px;
+    font-size: 12pt;
+    padding: 5px;
+    margin: 5px;
+  }
+  #mealForADay{
+    height: 180px;
+  }
+  .text{
+    font-size: 12pt;
+  }
+  .selected, .default{
+    width: 150px;
   }
 }
